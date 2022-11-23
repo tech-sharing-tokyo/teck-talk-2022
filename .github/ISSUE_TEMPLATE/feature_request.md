@@ -1,0 +1,90 @@
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: NaokiHaba
+
+---
+
+name: NestJS meetup ご応募フォーム
+description: NestJS meetup へのご応募をご検討頂きありがとうございます。下記のフォームに必要事項をご記入の上、Submitしてください。
+title: "<セッションタイトルを最大40文字程度で記入してください>"
+labels: [cfp]
+assignees:
+  - naoki-haba
+  - odanado
+  - xhiroga
+  - kimujun
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Twitter ID (必須)
+      description: Twitter ID (ダイレクトメッセージ可能なもの)をご記入ください。採択後、運営よりダイレクトメッセージにてご連絡します
+      placeholder: ここに Twitter ID をご記入ください
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 発表見込み時間 (必須)
+      description: 発表見込み時間をご入力ください
+      placeholder: 20分
+    validations:
+      required: true
+  - type: checkboxes
+    id: session-title
+    attributes:
+      label: セッションタイトル (必須)
+      options:
+        - label: セッションのタイトルをイシュー件名に最大40文字程度で入力しました
+          required: true
+  - type: textarea
+    id: session-abstract
+    attributes:
+      label: セッションのアブストラクト (最大250文字) (必須)
+      description: 採択の場合、原則としてこのままセッション情報として Web に掲載されます
+      placeholder: ここにセッション アブストラクトをご記入ください
+    validations:
+      required: true
+  - type: dropdown
+    id: session-expected-attendee-roles
+    attributes:
+      label: 想定受講者の開発対象やロール・役割 (複数選択可) (必須)
+      multiple: true
+      options:
+        - Web フロントエンド開発
+        - Web バックエンド / サーバーサイド開発
+        - モバイル / ネイティブアプリケーション開発
+        - DevOps / Infrastructure as Code
+        - 機械学習モデル開発
+        - その他
+    validations:
+      required: true
+  - type: dropdown
+    id: session-topics
+    attributes:
+      label: セッションのトピック (複数選択可) (必須)
+      multiple: true
+      options:
+        - プログラミング
+        - アプリケーションアーキテクチャー
+        - ソフトウェアテスト
+        - 開発プロセス
+        - エンジニアのキャリア
+        - エンジニア組織のカルチャー
+        - その他
+    validations:
+      required: true
+  - type: dropdown
+    id: session-format
+    attributes:
+      label: セッションのフォーマット (必須)
+      options:
+        - スライドを映しながら話す、通常セッション
+        - 対談形式
+        - パネルディスカッション
+        - その他
+    validations:
+      required: true
