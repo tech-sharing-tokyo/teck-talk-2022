@@ -1,5 +1,4 @@
 title: "<セッションタイトルを最大40文字程度で記入してください>"
-description: NestJS meetup へのご応募をご検討頂きありがとうございます。下記のフォームに必要事項をご記入の上、Submitしてください。
 labels: [cfp]
 body:
   - type: input
